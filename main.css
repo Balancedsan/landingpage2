@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+/*Layout Settings*/
+
+body{
+    height:100vh;
+    display:grid;
+    grid-template-rows:50vh 1fr 1fr 10vh;
+    grid-gap: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+    body {
+        grid-template-rows:10vh 1fr 1fr 10vh;
+    }
+}
+
+nav {
+}
+
+header {
+    height:100vh;
+}
+
+main {
+}
+
+footer {
+}
+
+/*nav list*/
+
+.nav__ul{
+    height:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+}
+
+.ul__li a {
+   font-family: "Open Sans";
+   text-decoration: none;
+   color:#000;
+   font-size:1.5rem;
+}
+
+.ul__li a:hover{
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+}
+
+.ul__img {
+    display: none;
+}
+
+
+
+@media (min-width:768px){
+    .nav__ul {
+        flex-direction: row;
+    }
+
+    .ul__img {
+       display: inline;
+    }
+}
+
+
+/*Header Styles*/
+
+.header {
+    background:url(./images/bed.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.header__div--overlay {
+    width:100%;
+    position: absolute;
+    height: 100%;
+    background:black;
+    opacity: 0.5;
+}
+.header__img {
+    position: absolute;
+    bottom:440px;
+    width:96px;
+    border-radius: 15px;
+}
+.header__h1 {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Montserrat-thin', sans-serif;
+    font-weight: 200;
+    color:white;
+    bottom:360px;
+}
+
+.header__h1--top{
+    font-size: 2.5rem;
+}
+
+.header__h1--bottom{
+   font-size: 2.5rem;
+   font-family: 'Montserrat-black', sans-serif;
+   font-weight:900;
+   bottom:180px;
+}
+
+.header__button {
+    position:absolute;
+    bottom:30px;
+    padding:1rem;
+    border-radius:10px;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size:1rem;
+    background:transparent;
+    border:2px solid black;
+    cursor: pointer;
+}
+
+.header__button:hover{
+    background:white;
+    color:black;
+}
+
+
+
+/*Main*/
+.sectionMain {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sectionMain__h1 {
+    text-align: center;
+    font-size:4rem;
+    margin-top:2rem;
+}
+
+
+
+.formSectionMain {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:2rem;
+    width:100%;
+    height:80vh;
+}
+@media (min-width:768px){
+    .formSectionMain {
+        flex-direction: row;
+        height:50vh;
+    }
+
+    .formSectionMain2  {
+        flex-direction: row-reverse;
+    }
+
+}
+.formSectionMain__icon{
+    font-size: 6rem;
+    line-height: 4 !important;
+    text-align: center;
+}
+.formSectionMain>*{
+    flex: 1 1 200px;
+}
+
+.formSectionMainText{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+@media(min-width:768px){
+    .formSectionMainText{
+        text-align: left;
+        margin-left:100px;
+    }
+
+    .formSectionMain2{
+        text-align: right;
+    }
+}
+
+.formSectionMainText__h1 {
+    margin: 2rem 0;
+}
+
+
+
+/*price plan*/
+
+.priceplan {
+    height: 100vh;
+    background:rgba(42, 95, 125, 0.59);
+}
+
+.priceplan__h1{
+    text-align: center;
+    font-size:4rem;
+    padding-top:3rem;
+    color:white;
+}
+
+.priceplan__plan {
+    width:100%;
+    display:grid;
+    margin-top:2rem;
+    justify-items:center;
+    grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+    grid-gap: 20px;
+}
+
+.priceplan__choiceM {
+    position: relative;
+}
+.priceplan__best{
+    position: absolute;
+    padding:0.5rem;
+    right:-30px;
+    top:30px;
+    font-size:2.0rem;
+    background:red;
+    border-radius: 15px;
+    color:white;
+    transform: rotate(50deg);
+
+}
+
+.priceplan__choices {
+    width:100%;
+    text-align: center;
+    background:white;
+    border-radius: 15px;
+    padding:4rem;
+}
+
+.priceplan__heading {
+   font-size:2.5rem;
+   line-height: 3;
+   border-bottom: 2px solid gray;
+}
+.priceplan__pricing {
+    font-size:2rem;
+    margin-top:2rem;
+}
+
+.priceplan__bonus {
+    font-size:2rem;
+    margin-top:2rem;
+    color:grey
+}
+
+/*Contact*/
+
+.contact {
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.contact__h1{
+    font-size: 4rem;
+    margin:2rem 0;
+    text-align: center;
+}
+
+/*contact Form*/
+.contactForm {
+    margin:2rem 0;
+    font-size: 1.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.contactForm__label{
+    margin:2rem 0;
+}
+
+.contactForm__text {
+    padding:0.5rem;
+    width:400px;
+    border-radius: 5px;
+}
+
+*:focus {
+    outline: none;
+}
