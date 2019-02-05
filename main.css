@@ -12,6 +12,7 @@ body{
     grid-template-rows:50vh 1fr 1fr 10vh;
     grid-gap: 5px;
     font-family: 'Open Sans', sans-serif;
+
 }
 
 @media (min-width: 768px) {
@@ -121,12 +122,13 @@ footer {
    bottom:180px;
 }
 
-.header__button {
+.header__link{
     position:absolute;
     bottom:30px;
+}
+.header__button {
     padding:1rem;
     border-radius:10px;
-    color:white;
     font-family: 'Montserrat', sans-serif;
     font-size:1rem;
     background:transparent;
@@ -134,10 +136,44 @@ footer {
     cursor: pointer;
 }
 
-.header__button:hover{
+a.header__button {
+    text-decoration: none;
+    color:white;
+}
+
+a:hover .header__button{
     background:white;
     color:black;
 }
+
+@media(min-width:768px) {
+    .header__img {
+        bottom:700px;
+        width:187px;
+    }
+    .header__h1 {
+        bottom:600px;
+    }
+    .header__h1--top{
+        font-size: 3rem;
+    }
+    
+    .header__h1--bottom{
+        bottom:400px;
+        font-size: 3.5rem;
+    }
+    
+    .header__link {
+        bottom:250px;
+
+    }
+
+    .header__button {
+        font-size:1.5rem;
+    }
+}
+
+
 
 
 
@@ -212,7 +248,7 @@ footer {
 /*price plan*/
 
 .priceplan {
-    height: 100vh;
+    margin-top:2rem;
     background:rgba(42, 95, 125, 0.59);
 }
 
@@ -221,14 +257,15 @@ footer {
     font-size:4rem;
     padding-top:3rem;
     color:white;
+
 }
 
 .priceplan__plan {
     width:100%;
     display:grid;
-    margin-top:2rem;
+    margin-top:3rem;
     justify-items:center;
-    grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
     grid-gap: 20px;
 }
 
@@ -251,9 +288,11 @@ footer {
 .priceplan__choices {
     width:100%;
     text-align: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     background:white;
     border-radius: 15px;
-    padding:4rem;
+    padding:2rem;
+    margin-bottom: 15rem;
 }
 
 .priceplan__heading {
@@ -275,7 +314,7 @@ footer {
 /*Contact*/
 
 .contact {
-    height:100vh;
+    margin-top:2rem;
     display:flex;
     align-items: center;
     justify-content: flex-start;
@@ -300,14 +339,43 @@ footer {
 
 .contactForm__label{
     margin:2rem 0;
+    font-size:1.5rem;
+    font-weight:700;
 }
 
 .contactForm__text {
-    padding:0.5rem;
+    padding:1rem;
+    font-size:1.5rem;
     width:400px;
+    font-weight:700;
     border-radius: 5px;
+    transition: width .35s ease-in-out;
 }
 
-*:focus {
-    outline: none;
+
+
+
+.contactForm__text:focus {
+    outline-color:#4286f4;
+    width:450px;
+    
+}
+
+.contactForm__submit {
+    margin:2rem 0;
+    padding:0.5rem;
+    font-size:1.5rem;
+    width:400px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight:700;
+    background:white;
+    transition: width .35s ease-in-out;
+    border: 2px solid black;
+}
+
+.contactForm__submit:hover{
+    background:#4286f4;
+    color:white;
+    width:450px;
 }
