@@ -149,7 +149,7 @@ a:hover .header__button{
 @media(min-width:768px) {
     .header__img {
         bottom:700px;
-        width:187px;
+        width:120px;
     }
     .header__h1 {
         bottom:600px;
@@ -249,6 +249,7 @@ a:hover .header__button{
 
 .priceplan {
     margin-top:2rem;
+    padding:6rem;
     background:rgba(42, 95, 125, 0.59);
 }
 
@@ -265,8 +266,8 @@ a:hover .header__button{
     display:grid;
     margin-top:3rem;
     justify-items:center;
-    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 550px));
+    grid-gap: 30px;
 }
 
 .priceplan__choiceM {
