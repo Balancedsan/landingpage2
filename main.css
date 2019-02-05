@@ -1,5 +1,6 @@
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin:0;
     padding:0;
 }
@@ -8,7 +9,9 @@
 
 body{
     height:100vh;
+    display:-ms-grid;
     display:grid;
+    -ms-grid-rows:50vh 5px 1fr 5px 1fr 5px 10vh;
     grid-template-rows:50vh 1fr 1fr 10vh;
     grid-gap: 5px;
     font-family: 'Open Sans', sans-serif;
@@ -17,6 +20,7 @@ body{
 
 @media (min-width: 768px) {
     body {
+        -ms-grid-rows:10vh 5px 1fr 5px 1fr 5px 10vh;
         grid-template-rows:10vh 1fr 1fr 10vh;
     }
 }
@@ -38,11 +42,19 @@ footer {
 
 .nav__ul{
     height:100%;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content:space-around;
-    align-items: center;
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     list-style: none;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .ul__li a {
@@ -65,7 +77,10 @@ footer {
 
 @media (min-width:768px){
     .nav__ul {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
 
     .ul__img {
@@ -81,9 +96,15 @@ footer {
     background-size:100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 
 }
@@ -179,10 +200,19 @@ a:hover .header__button{
 
 /*Main*/
 .sectionMain {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .sectionMain__h1 {
@@ -194,22 +224,37 @@ a:hover .header__button{
 
 
 .formSectionMain {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top:2rem;
     width:100%;
     height:80vh;
 }
 @media (min-width:768px){
     .formSectionMain {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         height:50vh;
     }
 
     .formSectionMain2  {
-        flex-direction: row-reverse;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
     }
 
 }
@@ -219,7 +264,9 @@ a:hover .header__button{
     text-align: center;
 }
 .formSectionMain>*{
-    flex: 1 1 200px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 200px;
+            flex: 1 1 200px;
 }
 
 .formSectionMainText{
@@ -263,6 +310,7 @@ a:hover .header__button{
 
 .priceplan__plan {
     width:100%;
+    display:-ms-grid;
     display:grid;
     margin-top:3rem;
     justify-items:center;
@@ -282,14 +330,17 @@ a:hover .header__button{
     background:red;
     border-radius: 15px;
     color:white;
-    transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+        -ms-transform: rotate(50deg);
+            transform: rotate(50deg);
 
 }
 
 .priceplan__choices {
     width:100%;
     text-align: center;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     background:white;
     border-radius: 15px;
     padding:2rem;
@@ -316,10 +367,19 @@ a:hover .header__button{
 
 .contact {
     margin-top:2rem;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .contact__h1{
@@ -332,10 +392,19 @@ a:hover .header__button{
 .contactForm {
     margin:2rem 0;
     font-size: 1.5rem;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .contactForm__label{
@@ -350,6 +419,8 @@ a:hover .header__button{
     width:400px;
     font-weight:700;
     border-radius: 5px;
+    -webkit-transition: width .35s ease-in-out;
+    -o-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;
 }
 
@@ -371,6 +442,8 @@ a:hover .header__button{
     border-radius: 15px;
     font-weight:700;
     background:white;
+    -webkit-transition: width .35s ease-in-out;
+    -o-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;
     border: 2px solid black;
 }
